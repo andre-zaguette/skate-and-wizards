@@ -1,0 +1,15 @@
+{
+  "SKATE_AND_WIZARDS": {
+    "ATTRIBUTES": "Atributos",
+    "SKILLS": "Habilidades",
+    "ATTRIBUTE_1": "Força",
+    "ATTRIBUTE_2": "Destreza",
+    "ATTRIBUTE_3": "Vontade",
+    "HEALTH": "Saúde",
+    "DEFENSE": "Defesa",
+    "PERMANENT_SPELLS": "Magias Permanentes",
+    "RANDOM_SPELLS": "Magias Aleatórias",
+    "BOOTLEG_SPELLS": "Magias Bootleg",
+    "ITEMS": "Itens"
+  }
+}

@@ -1,0 +1,60 @@
+<form class="sheet actor character-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <h1>{{name}}</h1>
+    </header>
+
+    <div class="sheet-body">
+        <!-- Atributos principais -->
+        <div class="attributes">
+            <h2>{{localize "SKATE_AND_WIZARDS.ATTRIBUTES"}}</h2>
+            <div class="attribute">
+                <label for="attr1">{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_1"}}</label>
+                <input type="text" name="data.attr1" value="{{data.attr1}}" />
+            </div>
+            <div class="attribute">
+                <label for="attr2">{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_2"}}</label>
+                <input type="text" name="data.attr2" value="{{data.attr2}}" />
+            </div>
+            <div class="attribute">
+                <label for="attr3">{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_3"}}</label>
+                <input type="text" name="data.attr3" value="{{data.attr3}}" />
+            </div>
+        </div>
+
+        <!-- Saúde e Defesa -->
+        <div class="health-defense">
+            <h2>{{localize "SKATE_AND_WIZARDS.HEALTH"}}</h2>
+            <input type="text" name="data.health" value="{{data.health}}" />
+            <h2>{{localize "SKATE_AND_WIZARDS.DEFENSE"}}</h2>
+            <input type="text" name="data.defense" value="{{data.defense}}" />
+        </div>
+
+        <!-- Magias Permanentes -->
+        <div class="permanent-spells">
+            <h2>{{localize "SKATE_AND_WIZARDS.PERMANENT_SPELLS"}}</h2>
+            <input type="text" name="data.permanentSpell1" value="{{data.permanentSpell1}}" />
+            <input type="text" name="data.permanentSpell2" value="{{data.permanentSpell2}}" />
+            <input type="text" name="data.permanentSpell3" value="{{data.permanentSpell3}}" />
+        </div>
+
+        <!-- Magias Aleatórias -->
+        <div class="random-spells">
+            <h2>{{localize "SKATE_AND_WIZARDS.RANDOM_SPELLS"}}</h2>
+            <input type="text" name="data.randomSpell" value="{{data.randomSpell}}" />
+        </div>
+
+        <!-- Magias Bootleg -->
+        <div class="bootleg-spells">
+            <h2>{{localize "SKATE_AND_WIZARDS.BOOTLEG_SPELLS"}}</h2>
+            <input type="text" name="data.bootlegSpell" value="{{data.bootlegSpell}}" />
+        </div>
+
+        <!-- Itens -->
+        <div class="items">
+            <h2>{{localize "SKATE_AND_WIZARDS.ITEMS"}}</h2>
+            <input type="text" name="data.item1" value="{{data.item1}}" />
+            <input type="text" name="data.item2" value="{{data.item2}}" />
+            <input type="text" name="data.item3" value="{{data.item3}}" />
+        </div>
+    </div>
+</form>
