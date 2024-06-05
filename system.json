@@ -9,7 +9,13 @@
   },
   "authors": [
     {
-      "name": ["Levi Nunez", "Michael C. Hsiung", "OrochiDrake"]
+      "name": "Levi Nunez"
+    },
+    {
+      "name": "Michael C. Hsiung"
+    },
+    {
+      "name": "OrochiDrake"
     }
   ],
   "relationships": {
