@@ -1,211 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Random Spells Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        td {
-            background-color: #fff;
-        }
-
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <h1 id="table-title">Random Spells Table</h1>
+<form class="random-spells">
+    <h1>{{localize "SKATE_AND_WIZARDS.RANDOM_SPELLS_TABLE"}}</h1>
     <table>
         <thead>
             <tr>
-                <th>1st Column</th>
-                <th>2nd Column</th>
-                <th>3rd Column</th>
-                <th>4th Column</th>
+                <th>{{localize "SKATE_AND_WIZARDS.COLUMN_1"}}</th>
+                <th>{{localize "SKATE_AND_WIZARDS.COLUMN_2"}}</th>
+                <th>{{localize "SKATE_AND_WIZARDS.COLUMN_3"}}</th>
+                <th>{{localize "SKATE_AND_WIZARDS.COLUMN_4"}}</th>
             </tr>
         </thead>
         <tbody id="spellsTable">
+            {{#each this.spellParts}}
             <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_1">Awesome</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_1">Animating</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_1">Acid</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_1">Armor</td>
+                <td>{{localize this.part1}}</td>
+                <td>{{localize this.part2}}</td>
+                <td>{{localize this.part3}}</td>
+                <td>{{localize this.part4}}</td>
             </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_2">Busted</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_2">Attracting</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_2">Air</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_2">Boot</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_3">Dope</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_3">Bewildering</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_3">Dust</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_3">Bread</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_4">Epic</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_4">Concealing</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_4">Earth</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_4">Bucket</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_5">Gnarly</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_5">Consuming</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_5">Fire</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_5">Chain</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_6">Hyped</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_6">Crushing</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_6">Light</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_6">Door</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_7">Janky</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_7">Duplicating</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_7">Reflection</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_7">Hammer</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_8">Killer</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_8">Expanding</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_8">Shadow</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_8">Lute</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_9">Psyched</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_9">Revealing</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_9">Smoke</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_9">Mattress</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_10">Rad</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_10">Sealing</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_10">Sound</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_10">Tower</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_11">Sketchy</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_11">Shielding</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_11">Spirit</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_11">Tree</td>
-            </tr>
-            <tr>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_1_12">Stoked</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_2_12">Summoning</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_3_12">Water</td>
-                <td data-i18n="SKATE_AND_WIZARDS.SPELL_PART_4_12">Well</td>
-            </tr>
+            {{/each}}
         </tbody>
     </table>
-    <button id="rollSpell">Roll Random Spell</button>
-    <h2 id="result-title">Result: <span id="spellResult"></span></h2>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const i18nElements = document.querySelectorAll('[data-i18n]');
-            i18nElements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                el.innerText = game.i18n.localize(key);
-            });
-        });
-
-        document.getElementById('rollSpell').addEventListener('click', () => {
-            const firstColumn = [
-                "SKATE_AND_WIZARDS.SPELL_PART_1_1",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_2",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_3",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_4",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_5",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_6",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_7",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_8",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_9",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_10",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_11",
-                "SKATE_AND_WIZARDS.SPELL_PART_1_12"
-            ];
-            const secondColumn = [
-                "SKATE_AND_WIZARDS.SPELL_PART_2_1",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_2",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_3",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_4",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_5",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_6",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_7",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_8",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_9",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_10",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_11",
-                "SKATE_AND_WIZARDS.SPELL_PART_2_12"
-            ];
-            const thirdColumn = [
-                "SKATE_AND_WIZARDS.SPELL_PART_3_1",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_2",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_3",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_4",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_5",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_6",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_7",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_8",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_9",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_10",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_11",
-                "SKATE_AND_WIZARDS.SPELL_PART_3_12"
-            ];
-            const fourthColumn = [
-                "SKATE_AND_WIZARDS.SPELL_PART_4_1",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_2",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_3",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_4",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_5",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_6",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_7",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_8",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_9",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_10",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_11",
-                "SKATE_AND_WIZARDS.SPELL_PART_4_12"
-            ];
-
-            function rollD12() {
-                return Math.floor(Math.random() * 12);
-            }
-
-            const spell = `${game.i18n.localize(firstColumn[rollD12()])} ${game.i18n.localize(secondColumn[rollD12()])} ${game.i18n.localize(thirdColumn[rollD12()])} ${game.i18n.localize(fourthColumn[rollD12()])}`;
-            document.getElementById('spellResult').innerText = spell;
-        });
-    </script>
-</body>
-
-</html>
+    <button type="button" id="rollSpell">{{localize "SKATE_AND_WIZARDS.ROLL_RANDOM_SPELL"}}</button>
+    <h2>{{localize "SKATE_AND_WIZARDS.RESULT"}}: <span id="spellResult"></span></h2>
+</form>

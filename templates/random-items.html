@@ -1,166 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Random Items Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        td {
-            background-color: #fff;
-        }
-
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <h1 id="table-title">Random Items Table</h1>
+<form class="random-items">
+    <h1>{{localize "SKATE_AND_WIZARDS.RANDOM_ITEMS_TABLE"}}</h1>
     <table>
         <thead>
             <tr>
-                <th>D12</th>
-                <th id="item-column">Item</th>
-                <th id="description-column">Description</th>
+                <th>{{localize "SKATE_AND_WIZARDS.D12"}}</th>
+                <th>{{localize "SKATE_AND_WIZARDS.ITEM"}}</th>
+                <th>{{localize "SKATE_AND_WIZARDS.DESCRIPTION"}}</th>
             </tr>
         </thead>
         <tbody id="itemsTable">
+            {{#each this.items}}
             <tr>
-                <td>1</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_1">Staff or Wand</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_1">Once per day, it doubles the distance, area, size, or
-                    effect of a spell you cast.</td>
+                <td>{{@index}}</td>
+                <td>{{localize this.name}}</td>
+                <td>{{localize this.description}}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_2">Skate Key</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_2">Once per day, you can finely tune your board and gain +1
-                    Health.</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_3">Smoking Pipe</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_3">Blowing sacred smoke before a test provides Advantage once
-                    per day. Passing to other Skate Wizards on the left also grants them Advantage.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_4">Shield</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_4">Provides +1 Defense when held. Players can choose to
-                    shatter it in combat to ignore all damage.</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_5">Melee Weapon</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_5">Adds +1 Damage, but not to Attack Rolls (e.g., knife,
-                    sword, mace).</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_6">Ranged Weapon</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_6">Adds +1 Damage, but not to Attack Rolls (e.g., bow,
-                    crossbow).</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_7">Wisdom of the Past</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_7">Recovered from under a mattress, this stack of old skate
-                    magazines contains articles and information about various cultures and past days.</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_8">Lockpicking Tools</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_8">Used by many Skate Wizards to break into the archmage's
-                    secret hideout.</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_9">Flask</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_9">Viscous lubricant, flammable, and tastes great on salads.
-                </td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_10">Rope</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_10">Made of hemp, obviously.</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_11">Torch and Lighter</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_11">A nice combined set received on your last birthday.</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_12">Ball Bearings</td>
-                <td data-i18n="SKATE_AND_WIZARDS.ITEM_DESC_12">A handful taken from the prototype of a new mega design
-                    for skateboard wheels you've been tinkering with.</td>
-            </tr>
+            {{/each}}
         </tbody>
     </table>
-    <button id="rollItem">Roll Random Item</button>
-    <h2 id="result-title">Result: <span id="itemResult"></span></h2>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const i18nElements = document.querySelectorAll('[data-i18n]');
-            i18nElements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                el.innerText = game.i18n.localize(key);
-            });
-        });
-
-        document.getElementById('rollItem').addEventListener('click', () => {
-            const items = [
-                "SKATE_AND_WIZARDS.ITEM_DESC_1",
-                "SKATE_AND_WIZARDS.ITEM_DESC_2",
-                "SKATE_AND_WIZARDS.ITEM_DESC_3",
-                "SKATE_AND_WIZARDS.ITEM_DESC_4",
-                "SKATE_AND_WIZARDS.ITEM_DESC_5",
-                "SKATE_AND_WIZARDS.ITEM_DESC_6",
-                "SKATE_AND_WIZARDS.ITEM_DESC_7",
-                "SKATE_AND_WIZARDS.ITEM_DESC_8",
-                "SKATE_AND_WIZARDS.ITEM_DESC_9",
-                "SKATE_AND_WIZARDS.ITEM_DESC_10",
-                "SKATE_AND_WIZARDS.ITEM_DESC_11",
-                "SKATE_AND_WIZARDS.ITEM_DESC_12"
-            ];
-
-            function rollD12() {
-                return Math.floor(Math.random() * 12);
-            }
-
-            const item = game.i18n.localize(items[rollD12()]);
-            document.getElementById('itemResult').innerText = item;
-        });
-    </script>
-</body>
-
-</html>
+    <button type="button" id="rollItem">{{localize "SKATE_AND_WIZARDS.ROLL_RANDOM_ITEM"}}</button>
+    <h2>{{localize "SKATE_AND_WIZARDS.RESULT"}}: <span id="itemResult"></span></h2>
+</form>

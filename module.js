@@ -24,67 +24,67 @@ class SkateAndWizardsActor extends Actor {
 
   rollRandomSpell(target) {
     const firstColumn = [
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_1"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_2"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_3"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_4"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_5"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_6"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_7"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_8"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_9"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_10"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_11"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_1_12")
+      "SKATE_AND_WIZARDS.SPELL_PART_1_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_12"
     ];
     const secondColumn = [
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_1"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_2"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_3"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_4"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_5"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_6"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_7"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_8"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_9"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_10"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_11"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_2_12")
+      "SKATE_AND_WIZARDS.SPELL_PART_2_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_12"
     ];
     const thirdColumn = [
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_1"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_2"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_3"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_4"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_5"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_6"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_7"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_8"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_9"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_10"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_11"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_3_12")
+      "SKATE_AND_WIZARDS.SPELL_PART_3_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_12"
     ];
     const fourthColumn = [
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_1"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_2"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_3"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_4"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_5"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_6"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_7"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_8"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_9"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_10"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_11"),
-      game.i18n.localize("SKATE_AND_WIZARDS.SPELL_PART_4_12")
+      "SKATE_AND_WIZARDS.SPELL_PART_4_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_12"
     ];
 
     function rollD12() {
       return Math.floor(Math.random() * 12);
     }
 
-    const spell = `${firstColumn[rollD12()]} ${secondColumn[rollD12()]} ${thirdColumn[rollD12()]} ${fourthColumn[rollD12()]}`;
+    const spell = `${game.i18n.localize(firstColumn[rollD12()])} ${game.i18n.localize(secondColumn[rollD12()])} ${game.i18n.localize(thirdColumn[rollD12()])} ${game.i18n.localize(fourthColumn[rollD12()])}`;
     this.update({[`data.${target}`]: spell});
   }
 }
@@ -135,6 +135,74 @@ class RandomSpellsTable extends FormApplication {
 
   activateListeners(html) {
     super.activateListeners(html);
+    html.find("#rollSpell").click(this._onRollSpell.bind(this));
+  }
+
+  _onRollSpell(event) {
+    event.preventDefault();
+    const firstColumn = [
+      "SKATE_AND_WIZARDS.SPELL_PART_1_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_1_12"
+    ];
+    const secondColumn = [
+      "SKATE_AND_WIZARDS.SPELL_PART_2_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_2_12"
+    ];
+    const thirdColumn = [
+      "SKATE_AND_WIZARDS.SPELL_PART_3_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_3_12"
+    ];
+    const fourthColumn = [
+      "SKATE_AND_WIZARDS.SPELL_PART_4_1",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_2",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_3",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_4",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_5",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_6",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_7",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_8",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_9",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_10",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_11",
+      "SKATE_AND_WIZARDS.SPELL_PART_4_12"
+    ];
+
+    function rollD12() {
+      return Math.floor(Math.random() * 12);
+    }
+
+    const spell = `${game.i18n.localize(firstColumn[rollD12()])} ${game.i18n.localize(secondColumn[rollD12()])} ${game.i18n.localize(thirdColumn[rollD12()])} ${game.i18n.localize(fourthColumn[rollD12()])}`;
+    document.getElementById('spellResult').innerText = spell;
   }
 }
 
@@ -152,6 +220,32 @@ class RandomItemsTable extends FormApplication {
 
   activateListeners(html) {
     super.activateListeners(html);
+    html.find("#rollItem").click(this._onRollItem.bind(this));
+  }
+
+  _onRollItem(event) {
+    event.preventDefault();
+    const items = [
+      "SKATE_AND_WIZARDS.ITEM_DESC_1",
+      "SKATE_AND_WIZARDS.ITEM_DESC_2",
+      "SKATE_AND_WIZARDS.ITEM_DESC_3",
+      "SKATE_AND_WIZARDS.ITEM_DESC_4",
+      "SKATE_AND_WIZARDS.ITEM_DESC_5",
+      "SKATE_AND_WIZARDS.ITEM_DESC_6",
+      "SKATE_AND_WIZARDS.ITEM_DESC_7",
+      "SKATE_AND_WIZARDS.ITEM_DESC_8",
+      "SKATE_AND_WIZARDS.ITEM_DESC_9",
+      "SKATE_AND_WIZARDS.ITEM_DESC_10",
+      "SKATE_AND_WIZARDS.ITEM_DESC_11",
+      "SKATE_AND_WIZARDS.ITEM_DESC_12"
+    ];
+
+    function rollD12() {
+      return Math.floor(Math.random() * 12);
+    }
+
+    const item = game.i18n.localize(items[rollD12()]);
+    document.getElementById('itemResult').innerText = item;
   }
 }
 
