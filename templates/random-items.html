@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Items Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Items Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>D12</th>
+                <th>Item</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="itemsTable">
+            <tr>
+                <td>1</td>
+                <td>Staff or Wand</td>
+                <td>Once per day, it doubles the distance, area, size, or effect of a spell you cast.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Skate Key</td>
+                <td>Once per day, you can finely tune your board and gain +1 Health.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Smoking Pipe</td>
+                <td>Blowing sacred smoke before a test provides Advantage once per day. Passing to other Skate Wizards
+                    on the left also grants them Advantage.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Shield</td>
+                <td>Provides +1 Defense when held. Players can choose to shatter it in combat to ignore all damage.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Melee Weapon</td>
+                <td>Adds +1 Damage, but not to Attack Rolls (e.g., knife, sword, mace).</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Ranged Weapon</td>
+                <td>Adds +1 Damage, but not to Attack Rolls (e.g., bow, crossbow).</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Wisdom of the Past</td>
+                <td>Recovered from under a mattress, this stack of old skate magazines contains articles and information
+                    about various cultures and past days.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Lockpicking Tools</td>
+                <td>Used by many Skate Wizards to break into the archmage's secret hideout.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Flask</td>
+                <td>Viscous lubricant, flammable, and tastes great on salads.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Rope</td>
+                <td>Made of hemp, obviously.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Torch and Lighter</td>
+                <td>A nice combined set received on your last birthday.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Ball Bearings</td>
+                <td>A handful taken from the prototype of a new mega design for skateboard wheels you've been tinkering
+                    with.</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="rollItem">Roll Random Item</button>
+    <h2>Result: <span id="itemResult"></span></h2>
+
+    <script>
+        document.getElementById('rollItem').addEventListener('click', () => {
+            const items = [
+                "Staff or Wand: Once per day, it doubles the distance, area, size, or effect of a spell you cast.",
+                "Skate Key: Once per day, you can finely tune your board and gain +1 Health.",
+                "Smoking Pipe: Blowing sacred smoke before a test provides Advantage once per day. Passing to other Skate Wizards on the left also grants them Advantage.",
+                "Shield: Provides +1 Defense when held. Players can choose to shatter it in combat to ignore all damage.",
+                "Melee Weapon: Adds +1 Damage, but not to Attack Rolls (e.g., knife, sword, mace).",
+                "Ranged Weapon: Adds +1 Damage, but not to Attack Rolls (e.g., bow, crossbow).",
+                "Wisdom of the Past: Recovered from under a mattress, this stack of old skate magazines contains articles and information about various cultures and past days.",
+                "Lockpicking Tools: Used by many Skate Wizards to break into the archmage's secret hideout.",
+                "Flask: Viscous lubricant, flammable, and tastes great on salads.",
+                "Rope: Made of hemp, obviously.",
+                "Torch and Lighter: A nice combined set received on your last birthday.",
+                "Ball Bearings: A handful taken from the prototype of a new mega design for skateboard wheels you've been tinkering with."
+            ];
+
+            function rollD12() {
+                return Math.floor(Math.random() * 12);
+            }
+
+            const item = items[rollD12()];
+            document.getElementById('itemResult').innerText = item;
+        });
+    </script>
+</body>
+
+</html>
