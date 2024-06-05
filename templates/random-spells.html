@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Spells Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Spells Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>1st Column</th>
+                <th>2nd Column</th>
+                <th>3rd Column</th>
+                <th>4th Column</th>
+            </tr>
+        </thead>
+        <tbody id="spellsTable">
+            <tr>
+                <td>Awesome</td>
+                <td>Animating</td>
+                <td>Acid</td>
+                <td>Armor</td>
+            </tr>
+            <tr>
+                <td>Busted</td>
+                <td>Attracting</td>
+                <td>Air</td>
+                <td>Boot</td>
+            </tr>
+            <tr>
+                <td>Dope</td>
+                <td>Bewildering</td>
+                <td>Dust</td>
+                <td>Bread</td>
+            </tr>
+            <tr>
+                <td>Epic</td>
+                <td>Concealing</td>
+                <td>Earth</td>
+                <td>Bucket</td>
+            </tr>
+            <tr>
+                <td>Gnarly</td>
+                <td>Consuming</td>
+                <td>Fire</td>
+                <td>Chain</td>
+            </tr>
+            <tr>
+                <td>Hyped</td>
+                <td>Crushing</td>
+                <td>Light</td>
+                <td>Door</td>
+            </tr>
+            <tr>
+                <td>Janky</td>
+                <td>Duplicating</td>
+                <td>Reflection</td>
+                <td>Hammer</td>
+            </tr>
+            <tr>
+                <td>Killer</td>
+                <td>Expanding</td>
+                <td>Shadow</td>
+                <td>Lute</td>
+            </tr>
+            <tr>
+                <td>Psyched</td>
+                <td>Revealing</td>
+                <td>Smoke</td>
+                <td>Mattress</td>
+            </tr>
+            <tr>
+                <td>Rad</td>
+                <td>Sealing</td>
+                <td>Sound</td>
+                <td>Tower</td>
+            </tr>
+            <tr>
+                <td>Sketchy</td>
+                <td>Shielding</td>
+                <td>Spirit</td>
+                <td>Tree</td>
+            </tr>
+            <tr>
+                <td>Stoked</td>
+                <td>Summoning</td>
+                <td>Water</td>
+                <td>Well</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="rollSpell">Roll Random Spell</button>
+    <h2>Result: <span id="spellResult"></span></h2>
+
+    <script>
+        document.getElementById('rollSpell').addEventListener('click', () => {
+            const firstColumn = ["Awesome", "Busted", "Dope", "Epic", "Gnarly", "Hyped", "Janky", "Killer", "Psyched", "Rad", "Sketchy", "Stoked"];
+            const secondColumn = ["Animating", "Attracting", "Bewildering", "Concealing", "Consuming", "Crushing", "Duplicating", "Expanding", "Revealing", "Sealing", "Shielding", "Summoning"];
+            const thirdColumn = ["Acid", "Air", "Dust", "Earth", "Fire", "Light", "Reflection", "Shadow", "Smoke", "Sound", "Spirit", "Water"];
+            const fourthColumn = ["Armor", "Boot", "Bread", "Bucket", "Chain", "Door", "Hammer", "Lute", "Mattress", "Tower", "Tree", "Well"];
+
+            function rollD12() {
+                return Math.floor(Math.random() * 12);
+            }
+
+            const spell = `${firstColumn[rollD12()]} ${secondColumn[rollD12()]} ${thirdColumn[rollD12()]} ${fourthColumn[rollD12()]}`;
+            document.getElementById('spellResult').innerText = spell;
+        });
+    </script>
+</body>
+
+</html>
