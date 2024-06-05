@@ -1,0 +1,102 @@
+{
+  "Actor": {
+    "types": ["character", "npc", "item-container"],
+    "templates": {
+      "character": {
+        "attributes": {
+          "strength": {
+            "value": 0,
+            "label": "SKATE_AND_WIZARDS.ATTRIBUTE_1"
+          },
+          "dexterity": {
+            "value": 0,
+            "label": "SKATE_AND_WIZARDS.ATTRIBUTE_2"
+          },
+          "will": {
+            "value": 0,
+            "label": "SKATE_AND_WIZARDS.ATTRIBUTE_3"
+          }
+        },
+        "health": {
+          "value": 10,
+          "label": "SKATE_AND_WIZARDS.HEALTH"
+        },
+        "defense": {
+          "value": 0,
+          "label": "SKATE_AND_WIZARDS.DEFENSE"
+        },
+        "spells": {
+          "permanent": ["", "", ""],
+          "random": ["", "", ""],
+          "bootleg": ""
+        },
+        "items": ["", "", "", ""]
+      },
+      "npc": {
+        "attributes": {
+          "strength": {
+            "value": 0,
+            "label": "SKATE_AND_WIZARDS.ATTRIBUTE_1"
+          },
+          "dexterity": {
+            "value": 0,
+            "label": "SKATE_AND_WIZARDS.ATTRIBUTE_2"
+          },
+          "will": {
+            "value": 0,
+            "label": "SKATE_AND_WIZARDS.ATTRIBUTE_3"
+          }
+        },
+        "health": {
+          "value": 10,
+          "label": "SKATE_AND_WIZARDS.HEALTH"
+        },
+        "defense": {
+          "value": 0,
+          "label": "SKATE_AND_WIZARDS.DEFENSE"
+        },
+        "spells": {
+          "permanent": ["", "", ""],
+          "random": ["", "", ""],
+          "bootleg": ""
+        },
+        "items": ["", "", "", ""]
+      },
+      "item-container": {
+        "items": []
+      }
+    }
+  },
+  "Item": {
+    "types": ["item", "weapon", "magic-item", "misc"],
+    "item": {
+      "description": {
+        "value": "",
+        "label": "SKATE_AND_WIZARDS.ITEM_DESC"
+      },
+      "quantity": 1,
+      "weight": 0
+    },
+    "weapon": {
+      "description": {
+        "value": "",
+        "label": "SKATE_AND_WIZARDS.WEAPON_DESC"
+      },
+      "damage": 0,
+      "range": 0
+    },
+    "magic-item": {
+      "description": {
+        "value": "",
+        "label": "SKATE_AND_WIZARDS.MAGIC_ITEM_DESC"
+      },
+      "effect": ""
+    },
+    "misc": {
+      "description": {
+        "value": "",
+        "label": "SKATE_AND_WIZARDS.MISC_DESC"
+      }
+    }
+  }
+}
