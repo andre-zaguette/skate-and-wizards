@@ -1,0 +1,83 @@
+.character-sheet {
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .character-sheet h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .character-sheet label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .character-sheet input[type="text"],
+  .character-sheet textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .character-sheet .sheet-header {
+    margin-bottom: 20px;
+  }
+  
+  .character-sheet .sheet-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .character-sheet .sheet-body > div {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  .character-sheet .level-xp, 
+  .character-sheet .health-defense {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .character-sheet .level, 
+  .character-sheet .xp, 
+  .character-sheet .health, 
+  .character-sheet .defense {
+    width: 48%;
+  }
+  
+  .character-sheet .attributes, 
+  .character-sheet .permanent-spells, 
+  .character-sheet .items, 
+  .character-sheet .bootleg-spells {
+    width: 100%;
+  }
+  
+  .character-sheet .spell, 
+  .character-sheet .item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .character-sheet .spell label, 
+  .character-sheet .item label {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .character-sheet textarea {
+    height: 100px;
+    resize: none;
+  }
+  

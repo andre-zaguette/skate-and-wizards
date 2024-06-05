@@ -1,60 +1,100 @@
 <form class="sheet actor character-sheet" autocomplete="off">
     <header class="sheet-header">
-        <h1>{{name}}</h1>
+        <h1>Character Sheet</h1>
+        <div class="character-name">
+            <label>SKATE WIZARD NAME</label>
+            <input type="text" name="name" value="{{name}}" />
+        </div>
+        <div class="player-name">
+            <label>PLAYER NAME</label>
+            <input type="text" name="data.playerName" value="{{data.playerName}}" />
+        </div>
     </header>
 
     <div class="sheet-body">
-        <!-- Atributos principais -->
-        <div class="attributes">
-            <h2>{{localize "SKATE_AND_WIZARDS.ATTRIBUTES"}}</h2>
-            <div class="attribute">
-                <label for="attr1">{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_1"}}</label>
-                <input type="text" name="data.attr1" value="{{data.attr1}}" />
+        <!-- Level and XP -->
+        <div class="level-xp">
+            <div class="level">
+                <label>LVL</label>
+                <input type="text" name="data.level" value="{{data.level}}" />
             </div>
-            <div class="attribute">
-                <label for="attr2">{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_2"}}</label>
-                <input type="text" name="data.attr2" value="{{data.attr2}}" />
-            </div>
-            <div class="attribute">
-                <label for="attr3">{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_3"}}</label>
-                <input type="text" name="data.attr3" value="{{data.attr3}}" />
+            <div class="xp">
+                <label>XP</label>
+                <input type="text" name="data.xp" value="{{data.xp}}" />
             </div>
         </div>
 
-        <!-- Saúde e Defesa -->
+        <!-- Health and Defense -->
         <div class="health-defense">
-            <h2>{{localize "SKATE_AND_WIZARDS.HEALTH"}}</h2>
-            <input type="text" name="data.health" value="{{data.health}}" />
-            <h2>{{localize "SKATE_AND_WIZARDS.DEFENSE"}}</h2>
-            <input type="text" name="data.defense" value="{{data.defense}}" />
+            <div class="health">
+                <label>HEALTH</label>
+                <input type="text" name="data.health" value="{{data.health}}" />
+            </div>
+            <div class="defense">
+                <label>DEFENSE</label>
+                <input type="text" name="data.defense" value="{{data.defense}}" />
+            </div>
         </div>
 
-        <!-- Magias Permanentes -->
+        <!-- Attributes -->
+        <div class="attributes">
+            <h2>Attributes</h2>
+            <div class="attribute">
+                <label>STRENGTH</label>
+                <input type="text" name="data.attributes.strength" value="{{data.attributes.strength}}" />
+            </div>
+            <div class="attribute">
+                <label>DEXTERITY</label>
+                <input type="text" name="data.attributes.dexterity" value="{{data.attributes.dexterity}}" />
+            </div>
+            <div class="attribute">
+                <label>WILL</label>
+                <input type="text" name="data.attributes.will" value="{{data.attributes.will}}" />
+            </div>
+        </div>
+
+        <!-- Permanent Spells -->
         <div class="permanent-spells">
-            <h2>{{localize "SKATE_AND_WIZARDS.PERMANENT_SPELLS"}}</h2>
-            <input type="text" name="data.permanentSpell1" value="{{data.permanentSpell1}}" />
-            <input type="text" name="data.permanentSpell2" value="{{data.permanentSpell2}}" />
-            <input type="text" name="data.permanentSpell3" value="{{data.permanentSpell3}}" />
+            <h2>Permanent Spells</h2>
+            <div class="spell">
+                <label>1.</label>
+                <input type="text" name="data.spells.permanent[0]" value="{{data.spells.permanent[0]}}" />
+            </div>
+            <div class="spell">
+                <label>2.</label>
+                <input type="text" name="data.spells.permanent[1]" value="{{data.spells.permanent[1]}}" />
+            </div>
+            <div class="spell">
+                <label>3.</label>
+                <input type="text" name="data.spells.permanent[2]" value="{{data.spells.permanent[2]}}" />
+            </div>
         </div>
 
-        <!-- Magias Aleatórias -->
-        <div class="random-spells">
-            <h2>{{localize "SKATE_AND_WIZARDS.RANDOM_SPELLS"}}</h2>
-            <input type="text" name="data.randomSpell" value="{{data.randomSpell}}" />
-        </div>
-
-        <!-- Magias Bootleg -->
-        <div class="bootleg-spells">
-            <h2>{{localize "SKATE_AND_WIZARDS.BOOTLEG_SPELLS"}}</h2>
-            <input type="text" name="data.bootlegSpell" value="{{data.bootlegSpell}}" />
-        </div>
-
-        <!-- Itens -->
+        <!-- Items -->
         <div class="items">
-            <h2>{{localize "SKATE_AND_WIZARDS.ITEMS"}}</h2>
-            <input type="text" name="data.item1" value="{{data.item1}}" />
-            <input type="text" name="data.item2" value="{{data.item2}}" />
-            <input type="text" name="data.item3" value="{{data.item3}}" />
+            <h2>Items</h2>
+            <div class="item">
+                <label>1.</label>
+                <input type="text" name="data.items[0]" value="{{data.items[0]}}" />
+            </div>
+            <div class="item">
+                <label>2.</label>
+                <input type="text" name="data.items[1]" value="{{data.items[1]}}" />
+            </div>
+            <div class="item">
+                <label>3.</label>
+                <input type="text" name="data.items[2]" value="{{data.items[2]}}" />
+            </div>
+            <div class="item">
+                <label>4.</label>
+                <input type="text" name="data.items[3]" value="{{data.items[3]}}" />
+            </div>
+        </div>
+
+        <!-- Bootleg Spells -->
+        <div class="bootleg-spells">
+            <h2>Bootleg Spells</h2>
+            <textarea name="data.spells.bootleg" rows="10">{{data.spells.bootleg}}</textarea>
         </div>
     </div>
 </form>
