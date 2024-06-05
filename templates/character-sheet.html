@@ -1,100 +1,62 @@
-<form class="sheet actor character-sheet" autocomplete="off">
+<form class="character-sheet" autocomplete="off">
     <header class="sheet-header">
-        <h1>Character Sheet</h1>
-        <div class="character-name">
-            <label>SKATE WIZARD NAME</label>
-            <input type="text" name="name" value="{{name}}" />
-        </div>
-        <div class="player-name">
-            <label>PLAYER NAME</label>
-            <input type="text" name="data.playerName" value="{{data.playerName}}" />
-        </div>
+        <h1>{{name}}</h1>
     </header>
 
+    <div class="sheet-tabs">
+        <ul class="tab-navigation">
+            <li class="active" data-tab="attributes">Attributes</li>
+            <li data-tab="spells">Spells</li>
+            <li data-tab="items">Items</li>
+        </ul>
+    </div>
+
     <div class="sheet-body">
-        <!-- Level and XP -->
-        <div class="level-xp">
-            <div class="level">
-                <label>LVL</label>
-                <input type="text" name="data.level" value="{{data.level}}" />
-            </div>
-            <div class="xp">
-                <label>XP</label>
-                <input type="text" name="data.xp" value="{{data.xp}}" />
-            </div>
-        </div>
-
-        <!-- Health and Defense -->
-        <div class="health-defense">
-            <div class="health">
-                <label>HEALTH</label>
-                <input type="text" name="data.health" value="{{data.health}}" />
-            </div>
-            <div class="defense">
-                <label>DEFENSE</label>
-                <input type="text" name="data.defense" value="{{data.defense}}" />
-            </div>
-        </div>
-
-        <!-- Attributes -->
-        <div class="attributes">
+        <section class="tab active" data-tab="attributes">
             <h2>Attributes</h2>
-            <div class="attribute">
-                <label>STRENGTH</label>
-                <input type="text" name="data.attributes.strength" value="{{data.attributes.strength}}" />
+            <div class="attributes">
+                <div class="attribute">
+                    <label>{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_1"}}</label>
+                    <input type="number" name="data.attributes.strength.value"
+                        value="{{data.attributes.strength.value}}">
+                </div>
+                <div class="attribute">
+                    <label>{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_2"}}</label>
+                    <input type="number" name="data.attributes.dexterity.value"
+                        value="{{data.attributes.dexterity.value}}">
+                </div>
+                <div class="attribute">
+                    <label>{{localize "SKATE_AND_WIZARDS.ATTRIBUTE_3"}}</label>
+                    <input type="number" name="data.attributes.will.value" value="{{data.attributes.will.value}}">
+                </div>
             </div>
-            <div class="attribute">
-                <label>DEXTERITY</label>
-                <input type="text" name="data.attributes.dexterity" value="{{data.attributes.dexterity}}" />
-            </div>
-            <div class="attribute">
-                <label>WILL</label>
-                <input type="text" name="data.attributes.will" value="{{data.attributes.will}}" />
-            </div>
-        </div>
+        </section>
 
-        <!-- Permanent Spells -->
-        <div class="permanent-spells">
-            <h2>Permanent Spells</h2>
-            <div class="spell">
-                <label>1.</label>
-                <input type="text" name="data.spells.permanent[0]" value="{{data.spells.permanent[0]}}" />
-            </div>
-            <div class="spell">
-                <label>2.</label>
-                <input type="text" name="data.spells.permanent[1]" value="{{data.spells.permanent[1]}}" />
-            </div>
-            <div class="spell">
-                <label>3.</label>
-                <input type="text" name="data.spells.permanent[2]" value="{{data.spells.permanent[2]}}" />
-            </div>
-        </div>
+        <section class="tab" data-tab="spells">
+            <h2>Spells</h2>
+            <div class="spells">
+                <h3>Permanent Spells</h3>
+                {{#each data.spells.permanent}}
+                <div class="spell">{{this}}</div>
+                {{/each}}
 
-        <!-- Items -->
-        <div class="items">
+                <h3>Random Spells</h3>
+                {{#each data.spells.random}}
+                <div class="spell">{{this}}</div>
+                {{/each}}
+
+                <h3>Bootleg Spell</h3>
+                <div class="spell">{{data.spells.bootleg}}</div>
+            </div>
+        </section>
+
+        <section class="tab" data-tab="items">
             <h2>Items</h2>
-            <div class="item">
-                <label>1.</label>
-                <input type="text" name="data.items[0]" value="{{data.items[0]}}" />
+            <div class="items">
+                {{#each data.items}}
+                <div class="item">{{this}}</div>
+                {{/each}}
             </div>
-            <div class="item">
-                <label>2.</label>
-                <input type="text" name="data.items[1]" value="{{data.items[1]}}" />
-            </div>
-            <div class="item">
-                <label>3.</label>
-                <input type="text" name="data.items[2]" value="{{data.items[2]}}" />
-            </div>
-            <div class="item">
-                <label>4.</label>
-                <input type="text" name="data.items[3]" value="{{data.items[3]}}" />
-            </div>
-        </div>
-
-        <!-- Bootleg Spells -->
-        <div class="bootleg-spells">
-            <h2>Bootleg Spells</h2>
-            <textarea name="data.spells.bootleg" rows="10">{{data.spells.bootleg}}</textarea>
-        </div>
+        </section>
     </div>
 </form>
