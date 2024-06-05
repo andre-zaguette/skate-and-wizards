@@ -30,7 +30,7 @@
       "path": "lang/pt-BR.json"
     }
   ],
-  "url": "",
-  "manifest": "",
-  "download": ""
+  "url": "https://github.com/orochidrake/skate-and-wizards",
+  "manifest": "https://raw.githubusercontent.com/orochidrake/skate-and-wizards/main/system.json",
+  "download": "https://github.com/orochidrake/skate-and-wizards/archive/refs/tags/v1.0.0.zip"
 }
