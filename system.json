@@ -1,16 +1,23 @@
 {
-  "name": "skate-and-wizards",
+  "id": "skate-and-wizards",
   "title": "Skate and Wizards",
   "description": "A custom RPG system for FoundryVTT combining skateboarding and magic.",
   "version": "1.0.0",
-  "author": "OrochiDrake",
-  "systems": [],
-  "minimumCoreVersion": "0.7.9",
-  "compatibleCoreVersion": "0.7.9",
-  "styles": ["styles.css"],
-  "scripts": ["module.js"],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11.35"
+  },
+  "authors": [
+    {
+      "name": ["Levi Nunez", "Michael C. Hsiung", "OrochiDrake"]
+    }
+  ],
+  "relationships": {
+    "requires": []
+  },
   "esmodules": [],
-  "packs": [],
+  "scripts": ["module.js"],
+  "styles": ["styles.css"],
   "languages": [
     {
       "lang": "en",
